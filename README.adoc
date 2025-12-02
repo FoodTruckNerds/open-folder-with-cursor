@@ -1,6 +1,6 @@
 = Cursor Open With Folder
 
-This repository contains `.reg` files that allow you to add "Open with Cursor" context menu options to Windows Explorer. These options enable you to quickly open a selected folder or the current directory in Cursor.
+On Windows, in order to open a folder in Cursor from File Explorer, you have to set up the context menu options in the registry. This repository contains `.reg` files that automate the process of adding "Open with Cursor" context menu options to File Explorer.
 
 == Features
 
@@ -8,8 +8,6 @@ This repository contains `.reg` files that allow you to add "Open with Cursor" c
 *   **Open from Folder in Tree/Details Pane**: Adds an "Open with Cursor" option when you right-click on a folder in the navigation tree or the details pane.
 
 == Installation
-
-To install these context menu options, follow these steps:
 
 .   **Download the `.reg` files**:
     *   `add-command-to-folder-background.reg`
@@ -26,7 +24,8 @@ After installation, you can use the new context menu options:
 
 == Uninstallation
 
-To remove these context menu options, you would typically create `.reg` files that delete the corresponding registry entries. This repository does not currently include uninstallation files. If you need to uninstall, you can manually remove the entries from the Windows Registry Editor (`regedit.exe`) at:
-
-*   `HKEY_CLASSES_ROOT\Directory\Background\shell\Open with Cursor`
-*   `HKEY_CLASSES_ROOT\Directory\shell\Open with Cursor`
+.   **Download the `.reg` files**:
+    *   `remove-command-to-folder-background.reg`
+    *   `remove-command-to-folder-in-tree.reg`
+.   **Double-click each `.reg` file**: Windows will ask for confirmation to merge the information into the registry. Click "Yes" to proceed.
+.   **Confirm**: A confirmation message will appear indicating that the keys and values have been successfully removed from the registry.
