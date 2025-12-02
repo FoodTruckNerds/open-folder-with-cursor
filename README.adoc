@@ -7,11 +7,47 @@ On Windows, in order to open a folder in Cursor from File Explorer, you have to 
 
 == Installation
 
+Windows 11 introduced a new streamlined context menu. You can install the context menu option for either the new Windows 11 menu, the classic menu (accessible via "Show more options"), or both.
+
+=== Option 1: Windows 11 New Context Menu
+
+This option adds "Open with Cursor" to the modern Windows 11 streamlined context menu that appears by default.
+
+.   **Download the `.reg` files**:
+    *   `add-command-to-folder-background-win11.reg`
+    *   `add-command-to-folder-in-tree-win11.reg`
+.   **Double-click each `.reg` file**: Windows will ask for confirmation to merge the information into the registry. Click "Yes" to proceed.
+.   **Confirm**: A confirmation message will appear indicating that the keys and values have been successfully added to the registry.
+
+=== Option 2: Classic Context Menu (Show More Options)
+
+This option adds "Open with Cursor" to the classic Windows context menu, accessible by clicking "Show more options" in the Windows 11 context menu, or directly in older versions of Windows.
+
 .   **Download the `.reg` files**:
     *   `add-command-to-folder-background.reg`
     *   `add-command-to-folder-in-tree.reg`
 .   **Double-click each `.reg` file**: Windows will ask for confirmation to merge the information into the registry. Click "Yes" to proceed.
 .   **Confirm**: A confirmation message will appear indicating that the keys and values have been successfully added to the registry.
+
+=== Option 3: Both Menus
+
+You can install both options simultaneously to have "Open with Cursor" appear in both the new Windows 11 menu and the classic menu. Simply run all four installation `.reg` files.
+
+=== Option 4: Disable New Windows 11 Menu (Classic Menu Always)
+
+If you prefer to always use the classic context menu and disable the new Windows 11 menu entirely, you can use this registry hack. This makes the classic menu appear directly without needing to click "Show more options".
+
+**Important**: This disables the new Windows 11 streamlined menu system-wide. If you use this approach, you only need the classic registry files (Option 2), not the Windows 11-specific ones.
+
+.   **Disable the new Windows 11 menu**: Double-click `enable-classic-menu-always.reg` and confirm the registry merge.
+.   **Restart Windows Explorer**: Restart File Explorer to apply the change. You can do this by:
+    *   Opening Task Manager (Ctrl+Shift+Esc)
+    *   Finding "Windows Explorer" in the processes list
+    *   Right-clicking and selecting "Restart"
+    *   Or simply restart your computer
+.   **Install the classic menu files**: Follow the instructions in "Option 2: Classic Context Menu" above. The classic menu will now appear directly when you right-click.
+
+**To revert** (restore the new Windows 11 menu): Double-click `disable-classic-menu-always.reg` and restart Windows Explorer as described above.
 
 == Usage
 
@@ -21,6 +57,16 @@ After installation, you can use the new context menu options:
 *   **Open Specific Folder**: Right-click on any folder icon (either in the navigation tree on the left or in the details pane on the right). You will see an "Open with Cursor" option. Clicking it will open that specific folder in Cursor.
 
 == Uninstallation
+
+=== Remove from Windows 11 New Context Menu
+
+.   **Download the `.reg` files**:
+    *   `remove-command-to-folder-background-win11.reg`
+    *   `remove-command-to-folder-in-tree-win11.reg`
+.   **Double-click each `.reg` file**: Windows will ask for confirmation to merge the information into the registry. Click "Yes" to proceed.
+.   **Confirm**: A confirmation message will appear indicating that the keys and values have been successfully removed from the registry.
+
+=== Remove from Classic Context Menu
 
 .   **Download the `.reg` files**:
     *   `remove-command-to-folder-background.reg`

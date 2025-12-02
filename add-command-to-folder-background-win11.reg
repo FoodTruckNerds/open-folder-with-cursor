@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\Directory\Background\shell\Cursor]
+@="Open with Cursor"
+
+[HKEY_CURRENT_USER\Software\Classes\SystemFileAssociations\Directory\Background\shell\Cursor\command]
+@="\"%LocalAppData%\\Programs\\Cursor\\Cursor.exe\" \"%V\""
+
