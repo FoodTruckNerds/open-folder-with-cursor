@@ -1,4 +1,4 @@
-= Cursor Open With Folder
+= Open Folder With Cursor
 
 On Windows, in order to open a folder in Cursor from File Explorer, you have to set up the context menu options in the registry. This repository contains `.reg` files that automate the process of adding "Open with Cursor" context menu options to File Explorer.
 
